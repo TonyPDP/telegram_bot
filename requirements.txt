@@ -1,2 +1,4 @@
 python-telegram-bot==13.0  # or the version you're using
 gunicorn==20.1.0
+aiogram==3.0.0b7
+python-dotenv
