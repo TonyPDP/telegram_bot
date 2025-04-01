@@ -6,24 +6,6 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 import logging
 import os
 import sys
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
-
-# Get token safely
-TOKEN = os.getenv("7755049307:AAEq18jZdgqk12Sl06EF0Xz4fwJpTe4fKrU")
-if not TOKEN:
-    raise ValueError("❌ Telegram token not found! Please set TOKEN in .env file or environment variables")
-
-# Check if another instance is running
-try:
-    bot = Bot(token=os.getenv("TOKEN"))
-    me = asyncio.run(bot.get_me())
-    print(f"Bot @{me.username} is starting...")
-except Exception as e:
-    print(f"Another instance is already running! Error: {e}")
-    sys.exit(1)  # Kill this instance
 
 # Bot configuration
 TOKEN = "7755049307:AAEq18jZdgqk12Sl06EF0Xz4fwJpTe4fKrU"
