@@ -6,7 +6,15 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 import logging
 import os
 import sys
-from aiogram import Bot
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Get token safely
+TOKEN = os.getenv("7755049307:AAEq18jZdgqk12Sl06EF0Xz4fwJpTe4fKrU")
+if not TOKEN:
+    raise ValueError("❌ Telegram token not found! Please set TOKEN in .env file or environment variables")
 
 # Check if another instance is running
 try:
